@@ -1,0 +1,9 @@
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\bin\Debug\sf-cs.exe
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\bin\Debug\sf-cs.pdb
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\sf_cs.Login.resources
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\sf_cs.Properties.Resources.resources
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\sf-cs.exe
+F:\Dropbox\school\c#\Supporter-Frontend\supporter-front\sf-cs\sf-cs\obj\x86\Debug\sf-cs.pdb
