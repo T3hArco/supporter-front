@@ -26,5 +26,7 @@ namespace sf_cs.Properties
                 return defaultInstance;
             }
         }
+
+        public string AuthKey { get; set; }
     }
 }

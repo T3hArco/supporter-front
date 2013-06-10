@@ -19,7 +19,10 @@ namespace sf_cs
 
         private void label1_Click(object sender, EventArgs e)
         {
-            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=postsupport", "", 1);
+            Login login = new Login();
+            String authkey = sf_cs.Properties.Settings.Default.AuthKey;
+
+            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=postsupport&authkey=" + authkey, "", 1);
             label1.Text = webRequestHandler.request();
         }
     }
