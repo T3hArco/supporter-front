@@ -34,6 +34,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.checkMyUIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@
             // toolStripSplitButton1
             // 
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkMyUIDToolStripMenuItem});
+            this.checkMyUIDToolStripMenuItem,
+            this.getListToolStripMenuItem});
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
@@ -81,6 +83,13 @@
             this.checkMyUIDToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.checkMyUIDToolStripMenuItem.Text = "Check my UID";
             this.checkMyUIDToolStripMenuItem.Click += new System.EventHandler(this.checkMyUIDToolStripMenuItem_Click);
+            // 
+            // getListToolStripMenuItem
+            // 
+            this.getListToolStripMenuItem.Name = "getListToolStripMenuItem";
+            this.getListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.getListToolStripMenuItem.Text = "Get List";
+            this.getListToolStripMenuItem.Click += new System.EventHandler(this.getListToolStripMenuItem_Click);
             // 
             // User
             // 
@@ -106,5 +115,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem checkMyUIDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getListToolStripMenuItem;
     }
 }

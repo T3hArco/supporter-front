@@ -34,5 +34,14 @@ namespace sf_cs
             WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getauthkey&authkey=" + authkey, "", 1);
             MessageBox.Show(webRequestHandler.request());
         }
+
+        private void getListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            String authkey = sf_cs.Properties.Settings.Default.AuthKey;
+
+            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getitemlist&authkey=" + authkey, "", 1);
+            MessageBox.Show(webRequestHandler.request());
+        }
     }
 }
