@@ -22,8 +22,17 @@ namespace sf_cs
             Login login = new Login();
             String authkey = sf_cs.Properties.Settings.Default.AuthKey;
 
-            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=postsupport&authkey=" + authkey, "", 1);
+            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getauthkey&authkey=" + authkey, "", 1);
             label1.Text = webRequestHandler.request();
+        }
+
+        private void checkMyUIDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            String authkey = sf_cs.Properties.Settings.Default.AuthKey;
+
+            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getauthkey&authkey=" + authkey, "", 1);
+            MessageBox.Show(webRequestHandler.request());
         }
     }
 }
