@@ -17,18 +17,8 @@ namespace sf_cs
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            String authkey = sf_cs.Properties.Settings.Default.AuthKey;
-
-            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getauthkey&authkey=" + authkey, "", 1);
-            label1.Text = webRequestHandler.request();
-        }
-
         private void checkMyUIDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
             String authkey = sf_cs.Properties.Settings.Default.AuthKey;
 
             WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getauthkey&authkey=" + authkey, "", 1);
@@ -37,11 +27,36 @@ namespace sf_cs
 
         private void getListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            ticketList.Items.Clear();
+
             String authkey = sf_cs.Properties.Settings.Default.AuthKey;
 
             WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getitemlist&authkey=" + authkey, "", 1);
-            MessageBox.Show(webRequestHandler.request());
+            //MessageBox.Show(webRequestHandler.request());
+            String ticketsUnformatted = webRequestHandler.request();
+            String[] ticketsFormatted = ticketsUnformatted.Split(',');
+
+            for (int i = 0; i < ticketsUnformatted.Length-1; i++)
+            {
+                ticketList.Items.Add(ticketsFormatted[i]);
+            }
+        }
+
+        private void User_Load(object sender, EventArgs e)
+        {
+            ticketList.Items.Clear();
+
+            String authkey = sf_cs.Properties.Settings.Default.AuthKey;
+
+            WebrequestHandler webRequestHandler = new WebrequestHandler("http://localhost/supporter/supporter-backend/php/?act=getitemlist&authkey=" + authkey, "", 1);
+            //MessageBox.Show(webRequestHandler.request());
+            String ticketsUnformatted = webRequestHandler.request();
+            String[] ticketsFormatted = ticketsUnformatted.Split(',');
+
+            for (int i = 0; i < ticketsUnformatted.Length; i++)
+            {
+                ticketList.Items.Add(ticketsFormatted[i]);
+            }
         }
     }
 }
